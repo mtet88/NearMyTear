@@ -17,11 +17,10 @@ class VehicleAnnotationView: MKAnnotationView {
     func setup(with poiItem: MKAnnotation) {
         
         if let _poiItem = poiItem as? POIItem {
-            self.clusterCountLable?.isHidden = true
+            self.clusterCountLable?.text = " "
             self.batteryView?.isHidden = false
             self.batteryView?.progress = (_poiItem.battery ?? 0)
         } else if let _clusterItem = poiItem as? MKClusterAnnotation {
-            self.clusterCountLable?.isHidden = false
             self.batteryView?.isHidden = true
             self.clusterCountLable?.text = "\(_clusterItem.memberAnnotations.count)"
         }

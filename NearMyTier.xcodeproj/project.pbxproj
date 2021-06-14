@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34005F342677FBF9003FF8B5 /* VehicleBatteryFilterAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34005F332677FBF9003FF8B5 /* VehicleBatteryFilterAdapter.swift */; };
 		3436D1862663F4CA00CB3889 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436D1852663F4CA00CB3889 /* Vehicle.swift */; };
 		3436D1882663F93100CB3889 /* VehiclesCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436D1872663F93100CB3889 /* VehiclesCache.swift */; };
 		3436D18B2663FA6100CB3889 /* POIItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436D18A2663FA6100CB3889 /* POIItem.swift */; };
@@ -65,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34005F332677FBF9003FF8B5 /* VehicleBatteryFilterAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleBatteryFilterAdapter.swift; sourceTree = "<group>"; };
 		3436D1852663F4CA00CB3889 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		3436D1872663F93100CB3889 /* VehiclesCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesCache.swift; sourceTree = "<group>"; };
 		3436D18A2663FA6100CB3889 /* POIItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = POIItem.swift; sourceTree = "<group>"; };
@@ -123,6 +125,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34005F2F2677FB8B003FF8B5 /* General */ = {
+			isa = PBXGroup;
+			children = (
+				3436D1922663FB8400CB3889 /* POIItemServiceWithFallbackAdapter.swift */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		34005F302677FB9E003FF8B5 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				3436D1952663FC9D00CB3889 /* VehiclesCacheAdapter.swift */,
+				3436D1982663FE8800CB3889 /* VehiclesAPIAdapter.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		34005F312677FBAD003FF8B5 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				3436D19F266413C100CB3889 /* LocationManagerAdapter.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		34005F322677FBBA003FF8B5 /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				34005F332677FBF9003FF8B5 /* VehicleBatteryFilterAdapter.swift */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
 		3436D1892663F9F800CB3889 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,10 +169,10 @@
 		3436D18D2663FAB500CB3889 /* Adapters */ = {
 			isa = PBXGroup;
 			children = (
-				3436D19F266413C100CB3889 /* LocationManagerAdapter.swift */,
-				3436D1922663FB8400CB3889 /* POIItemServiceWithFallbackAdapter.swift */,
-				3436D1952663FC9D00CB3889 /* VehiclesCacheAdapter.swift */,
-				3436D1982663FE8800CB3889 /* VehiclesAPIAdapter.swift */,
+				34005F322677FBBA003FF8B5 /* Filters */,
+				34005F312677FBAD003FF8B5 /* Location */,
+				34005F302677FB9E003FF8B5 /* DataSource */,
+				34005F2F2677FB8B003FF8B5 /* General */,
 			);
 			path = Adapters;
 			sourceTree = "<group>";
@@ -390,6 +425,7 @@
 			files = (
 				3436D1862663F4CA00CB3889 /* Vehicle.swift in Sources */,
 				34D2061826595BD80056F34C /* APIVehicle.swift in Sources */,
+				34005F342677FBF9003FF8B5 /* VehicleBatteryFilterAdapter.swift in Sources */,
 				3436D1A62664148400CB3889 /* LocationPermissionViewController.swift in Sources */,
 				34D2061626595B7D0056F34C /* APIData.swift in Sources */,
 				3436D1A9266414B200CB3889 /* NMTViewController.swift in Sources */,

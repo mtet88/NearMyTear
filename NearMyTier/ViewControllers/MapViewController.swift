@@ -12,6 +12,7 @@ import Foundation
 class MapViewController: NMTViewController {
     
     @IBOutlet var mapView: MKMapView?
+    @IBOutlet var filtersSegmentedControl: UISegmentedControl?
     
     var locationService : LocationManagerAdapter?
     
@@ -38,6 +39,7 @@ class MapViewController: NMTViewController {
         cacheService
             .fallback(apiService)
             .retry()
+            .filteredByBattery(self.filtersSegmentedControl?.selectedSegmentIndex == 0)
             .loadPOIItems { (items: [POIItem]) in
                 
                 self.mapView?.removeAnnotations(self.poiItems)
@@ -49,7 +51,13 @@ class MapViewController: NMTViewController {
     private func setupViews() {
         self.mapView?.delegate = self
     }
+    
+    private func filterChanged() {
+        
+    }
 }
+
+// MARK: - MKMapViewDelegate
 
 extension MapViewController: MKMapViewDelegate {
     
@@ -66,5 +74,14 @@ extension MapViewController: MKMapViewDelegate {
         let mkAnnotationView = VehicleAnnotationView.instanceFromNib()
         mkAnnotationView?.setup(with: annotation)
         return mkAnnotationView
+    }
+}
+
+// MARK: - Actions
+
+extension MapViewController {
+    
+    @IBAction func filterChanged(_ sender: Any) {
+        self.reloadService()
     }
 }

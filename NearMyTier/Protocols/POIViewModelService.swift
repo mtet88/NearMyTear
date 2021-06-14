@@ -14,6 +14,15 @@ protocol POIItemService {
 
 extension POIItemService {
     
+    func filteredByBattery(_ on: Bool) -> POIItemService {
+        
+        guard (on == true) else {
+            return self
+        }
+        
+        return VehicleBatteryFilterAdapter(vehiclesSource: self)
+    }
+    
     func fallback(_ fallbackService: POIItemService) -> POIItemService {
         return POIItemServiceWithFallbackAdapter(primary: self, fallback: fallbackService)
     }

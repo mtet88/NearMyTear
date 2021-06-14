@@ -26,6 +26,9 @@
                                     <segment title="Available"/>
                                     <segment title="All"/>
                                 </segments>
+                                <connections>
+                                    <action selector="filterChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="DgB-qN-iWG"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -40,6 +43,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="filtersSegmentedControl" destination="8Wb-w3-Tgo" id="GSC-Z4-51g"/>
                         <outlet property="mapView" destination="4vm-Ma-5ab" id="iin-jz-E3P"/>
                     </connections>
                 </viewController>
